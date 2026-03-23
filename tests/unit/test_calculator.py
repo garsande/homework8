@@ -15,9 +15,9 @@ Number = Union[int, float]
 @pytest.mark.parametrize(
     "a, b, expected",
     [
-        (2, 8, 10),           # Test adding two positive integers
-        (-2, -7, -9),        # Test adding two negative integers
-        (2.5, 4.5, 7.0),     # Test adding two positive floats
+        (2, 3, 5),           # Test adding two positive integers
+        (-2, -3, -5),        # Test adding two negative integers
+        (2.5, 3.5, 6.0),     # Test adding two positive floats
         (-2.5, 3.5, 1.0),    # Test adding a negative float and a positive float
         (0, 0, 0),            # Test adding zeros
     ],
@@ -64,9 +64,9 @@ def test_add(a: Number, b: Number, expected: Number) -> None:
 @pytest.mark.parametrize(
     "a, b, expected",
     [
-        (10, 3, 7),           # Test subtracting a smaller positive integer from a larger one
+        (5, 3, 2),           # Test subtracting a smaller positive integer from a larger one
         (-5, -3, -2),        # Test subtracting a negative integer from another negative integer
-        (8.5, 2.5, 6.0),     # Test subtracting two positive floats
+        (5.5, 2.5, 3.0),     # Test subtracting two positive floats
         (-5.5, -2.5, -3.0),  # Test subtracting two negative floats
         (0, 0, 0),            # Test subtracting zeros
     ],
@@ -113,11 +113,11 @@ def test_subtract(a: Number, b: Number, expected: Number) -> None:
 @pytest.mark.parametrize(
     "a, b, expected",
     [
-        (3, 3, 9),           # Test multiplying two positive integers
-        (-2, 4, -8),         # Test multiplying a negative integer with a positive integer
-        (2.5, 6.0, 15.0),    # Test multiplying two positive floats
+        (2, 3, 6),           # Test multiplying two positive integers
+        (-2, 3, -6),         # Test multiplying a negative integer with a positive integer
+        (2.5, 4.0, 10.0),    # Test multiplying two positive floats
         (-2.5, 4.0, -10.0),  # Test multiplying a negative float with a positive float
-        (0, 9, 0),            # Test multiplying zero with a positive integer
+        (0, 5, 0),            # Test multiplying zero with a positive integer
     ],
     ids=[
         "multiply_two_positive_integers",
@@ -162,11 +162,11 @@ def test_multiply(a: Number, b: Number, expected: Number) -> None:
 @pytest.mark.parametrize(
     "a, b, expected",
     [
-        (12, 3, 4.0),           # Test dividing two positive integers
-        (-9, 3, -3.0),         # Test dividing a negative integer by a positive integer
-        (15.0, 3.0, 5.0),       # Test dividing two positive floats
-        (-18.0, 3.0, -6.0),     # Test dividing a negative float by a positive float
-        (0, 3, 0.0),            # Test dividing zero by a positive integer
+        (6, 3, 2.0),           # Test dividing two positive integers
+        (-6, 3, -2.0),         # Test dividing a negative integer by a positive integer
+        (6.0, 3.0, 2.0),       # Test dividing two positive floats
+        (-6.0, 3.0, -2.0),     # Test dividing a negative float by a positive float
+        (0, 5, 0.0),            # Test dividing zero by a positive integer
     ],
     ids=[
         "divide_two_positive_integers",

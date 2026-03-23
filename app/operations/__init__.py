@@ -40,7 +40,8 @@ def add(a: Number, b: Number) -> Number:
     >>> add(2.5, 3)
     5.5
     """
-    result = a + b  # Perform addition of a and b
+    # Perform addition of a and b
+    result = a + b
     return result
 
 def subtract(a: Number, b: Number) -> Number:
@@ -60,7 +61,8 @@ def subtract(a: Number, b: Number) -> Number:
     >>> subtract(5.5, 2)
     3.5
     """
-    result = a - b # Perform subtraction of b from a
+    # Perform subtraction of b from a
+    result = a - b
     return result
 
 def multiply(a: Number, b: Number) -> Number:
@@ -80,7 +82,8 @@ def multiply(a: Number, b: Number) -> Number:
     >>> multiply(2.5, 4)
     10.0
     """
-    result = a * b # Perform multiplication of a and b
+    # Perform multiplication of a and b
+    result = a * b
     return result
 
 def divide(a: Number, b: Number) -> float:
@@ -109,8 +112,9 @@ def divide(a: Number, b: Number) -> float:
     """
     # Check if the divisor is zero to prevent division by zero
     if b == 0:
-        raise ValueError("Cannot divide by zero!")  # Raise a ValueError with a descriptive message
+        # Raise a ValueError with a descriptive message
+        raise ValueError("Cannot divide by zero!")
     
-    
-    result = a / b          # Perform division of a by b and return the result as a float
+    # Perform division of a by b and return the result as a float
+    result = a / b
     return result
